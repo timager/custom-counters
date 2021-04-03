@@ -1,4 +1,10 @@
-.App {
-  text-align: center;
+.app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.random-number {
+    font-size: 128px;
+}
