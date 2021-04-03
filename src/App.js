@@ -1,10 +1,13 @@
 import './App.css'
+import React, { useState } from 'react'
 
 function App () {
+  const [number, setNumber] = useState('...')
   return (
     <div className={'app'}>
-      <div className={'random-number'}>
-        {getRandomInDiapason(1, 6)}
+      <div className={'random-number'}
+           onClick={() => setNumber(getRandomInDiapason(1, 6))}>
+        {number}
       </div>
     </div>
   )
