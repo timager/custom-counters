@@ -7,4 +7,10 @@
 
 .random-number {
     font-size: 128px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    border: 3px solid #5e1e9a;
+    cursor: pointer;
+    border-radius: 15px;
 }
