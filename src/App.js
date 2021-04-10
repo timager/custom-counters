@@ -5,7 +5,7 @@ import { Config } from './components/Config'
 import { ConfigContext } from './hooks/ConfigContext'
 import { useSavedConfig } from './hooks/useSavedConfig'
 
-function App () {
+export default function App () {
   const [savedConfig] = useSavedConfig()
   const [configContext, setConfigContext] = useState(savedConfig)
   return (
@@ -19,5 +19,3 @@ function App () {
     </div>
   )
 }
-
-export default App
