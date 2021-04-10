@@ -7,10 +7,10 @@ import { useSavedConfig } from './hooks/useSavedConfig'
 
 function App () {
   const [savedConfig] = useSavedConfig()
-  const [context, setContext] = useState(savedConfig)
+  const [configContext, setConfigContext] = useState(savedConfig)
   return (
     <div className={'app'}>
-      <ConfigContext.Provider value={[context, setContext]}>
+      <ConfigContext.Provider value={[configContext, setConfigContext]}>
         <Config/>
         <div className={'counters-container'}>
           <RandomNumber/>
