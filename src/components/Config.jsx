@@ -1,10 +1,5 @@
 import { useConfig } from '../hooks/useConfig'
 
-export const DEFAULT_CONFIG = {
-  min: 1,
-  max: 6,
-}
-
 export function Config () {
   const [min, setMin] = useConfig('min')
   const [max, setMax] = useConfig('max')
