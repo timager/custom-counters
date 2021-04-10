@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
+import { useConfig } from '../hooks/useConfig'
 
 export function RandomNumber () {
-  const [number, setNumber] = useState('...')
+  const [value, setNumber] = useState('...')
   const [isAnimated, setIsAnimated] = useState(false)
+  const [min] = useConfig('min')
+  const [max] = useConfig('max')
 
   function generateNewNumber () {
     setIsAnimated(true)
-    setNumber(getRandomInDiapason(1, 6))
+    setNumber(getRandomInDiapason(min, max))
     setTimeout(() => setIsAnimated(false), 400)
   }
 
@@ -20,7 +23,7 @@ export function RandomNumber () {
     <div
       className={(isAnimated ? 'rotation-animation ' : ' ') + 'random-number'}
       onClick={generateNewNumber}>
-      {number}
+      {value}
     </div>
   )
 }
