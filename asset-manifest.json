@@ -10,6 +10,8 @@
     "static/js/3.d1d07900.chunk.js": "/custom-counters/static/js/3.d1d07900.chunk.js",
     "static/js/3.d1d07900.chunk.js.map": "/custom-counters/static/js/3.d1d07900.chunk.js.map",
     "index.html": "/custom-counters/index.html",
+    "service-worker.js": "/custom-counters/service-worker.js",
+    "service-worker.js.map": "/custom-counters/service-worker.js.map",
     "static/css/main.8b6e01a8.chunk.css.map": "/custom-counters/static/css/main.8b6e01a8.chunk.css.map",
     "static/js/2.63d8bb6e.chunk.js.LICENSE.txt": "/custom-counters/static/js/2.63d8bb6e.chunk.js.LICENSE.txt"
   },
