@@ -1,4 +1,5 @@
 .app {
+    --rect-size: 150px;
     margin: 20px;
 }
 
@@ -6,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 50px;
 }
 
 .config {
@@ -15,26 +17,33 @@
 
 .config input {
     margin: 5px;
-    width: 50px;
+    width: 60px;
     height: 50px;
     font-size: 30px;
 }
 
 .random-number {
-    font-size: 128px;
-    width: 150px;
-    height: 150px;
+    font-size: 80px;
+    width: var(--rect-size);
+    height: var(--rect-size);
+    line-height: var(--rect-size);
     text-align: center;
     border: 3px solid #5e1e9a;
     cursor: pointer;
     border-radius: 15px;
     user-select: none;
-    vertical-align: middle;
 }
 
 
 .rotation-animation {
     animation: 200ms linear 0s normal none infinite running rotation;
+}
+
+@media all and (max-width: 720px) {
+    .config {
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 @keyframes rotation {
