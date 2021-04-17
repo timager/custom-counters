@@ -1,7 +1,7 @@
 {
   "short_name": "Кубик",
   "name": "Кубик",
-  "start_url": "/custom-counters",
+  "start_url": "https://timager.github.io/custom-counters/",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,6 +21,7 @@
     }
   ],
   "display": "standalone",
+  "orientation": "portrait",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
