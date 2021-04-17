@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/custom-counters/static/css/main.8b6e01a8.chunk.css",
-    "main.js": "/custom-counters/static/js/main.aa826888.chunk.js",
-    "main.js.map": "/custom-counters/static/js/main.aa826888.chunk.js.map",
+    "main.js": "/custom-counters/static/js/main.665828e4.chunk.js",
+    "main.js.map": "/custom-counters/static/js/main.665828e4.chunk.js.map",
     "runtime-main.js": "/custom-counters/static/js/runtime-main.2d0d78f6.js",
     "runtime-main.js.map": "/custom-counters/static/js/runtime-main.2d0d78f6.js.map",
     "static/js/2.63d8bb6e.chunk.js": "/custom-counters/static/js/2.63d8bb6e.chunk.js",
@@ -10,8 +10,6 @@
     "static/js/3.d1d07900.chunk.js": "/custom-counters/static/js/3.d1d07900.chunk.js",
     "static/js/3.d1d07900.chunk.js.map": "/custom-counters/static/js/3.d1d07900.chunk.js.map",
     "index.html": "/custom-counters/index.html",
-    "service-worker.js": "/custom-counters/service-worker.js",
-    "service-worker.js.map": "/custom-counters/service-worker.js.map",
     "static/css/main.8b6e01a8.chunk.css.map": "/custom-counters/static/css/main.8b6e01a8.chunk.css.map",
     "static/js/2.63d8bb6e.chunk.js.LICENSE.txt": "/custom-counters/static/js/2.63d8bb6e.chunk.js.LICENSE.txt"
   },
@@ -19,6 +17,6 @@
     "static/js/runtime-main.2d0d78f6.js",
     "static/js/2.63d8bb6e.chunk.js",
     "static/css/main.8b6e01a8.chunk.css",
-    "static/js/main.aa826888.chunk.js"
+    "static/js/main.665828e4.chunk.js"
   ]
 }
