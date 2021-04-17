@@ -1,7 +1,7 @@
 {
   "short_name": "Кубик",
   "name": "Кубик",
-  "start_url": ".",
+  "start_url": "/custom-counters",
   "icons": [
     {
       "src": "favicon.ico",
