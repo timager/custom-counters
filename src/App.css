@@ -23,7 +23,7 @@
 }
 
 .random-number {
-    font-size: 80px;
+    font-size: calc(var(--rect-size) / 2);
     width: var(--rect-size);
     height: var(--rect-size);
     line-height: var(--rect-size);
