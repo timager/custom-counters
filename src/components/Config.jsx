@@ -11,11 +11,11 @@ export function Config () {
   return (
     <div className={'config'}>
       <label>От
-        <input value={min}
+        <input value={min} inputMode={'numeric'}
                onChange={e => setMin(validateIntVal(e.target.value))}/>
       </label>
       <label>До
-        <input value={max}
+        <input value={max} inputMode={'numeric'}
                onChange={e => setMax(validateIntVal(e.target.value))}/>
       </label>
     </div>
