@@ -76,6 +76,7 @@
 }
 
 .clear-log-button {
+    user-select: none;
     color: rgba(0, 0, 0, 0.3);
 }
 
