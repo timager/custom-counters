@@ -4,6 +4,7 @@ import { RandomNumber } from './components/RandomNumber'
 import { Config } from './components/Config'
 import { ConfigContext } from './hooks/ConfigContext'
 import { useSavedConfig } from './hooks/useSavedConfig'
+import { Log } from './components/Log/Log'
 
 export default function App () {
   const [savedConfig] = useSavedConfig()
@@ -12,8 +13,11 @@ export default function App () {
     <div className={'app'}>
       <ConfigContext.Provider value={[configContext, setConfigContext]}>
         <Config/>
-        <div className={'counters-container'}>
+        <div className={'container'}>
           <RandomNumber/>
+        </div>
+        <div className={'container'}>
+          <Log/>
         </div>
       </ConfigContext.Provider>
     </div>

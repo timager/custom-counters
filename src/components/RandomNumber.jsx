@@ -6,10 +6,16 @@ export function RandomNumber () {
   const [isAnimated, setIsAnimated] = useState(false)
   const [min] = useConfig('min')
   const [max] = useConfig('max')
+  const [log, setLog] = useConfig('log')
+  const addToLog = (value, min, max) => {
+    setLog([{ value: value, min: min, max: max }, ...log])
+  }
 
   function generateNewNumber () {
     setIsAnimated(true)
-    setNumber(getRandomInDiapason(min, max))
+    let value = getRandomInDiapason(min, max)
+    setNumber(value)
+    addToLog(value, min, max)
     setTimeout(() => setIsAnimated(false), 400)
   }
 

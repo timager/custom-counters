@@ -1,6 +1,7 @@
 const DEFAULT_CONFIG = {
   min: 1,
   max: 6,
+  log: [],
 }
 
 export function useSavedConfig () {

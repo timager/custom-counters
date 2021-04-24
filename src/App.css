@@ -1,9 +1,13 @@
+:root {
+    --primary-color: #14b389;
+}
+
 .app {
     --rect-size: 150px;
     margin: 20px;
 }
 
-.counters-container {
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,15 +32,56 @@
     height: var(--rect-size);
     line-height: var(--rect-size);
     text-align: center;
-    border: 3px solid #5e1e9a;
+    border: 3px solid var(--primary-color);
     cursor: pointer;
     border-radius: 15px;
     user-select: none;
 }
 
-
 .rotation-animation {
     animation: 200ms linear 0s normal none infinite running rotation;
+}
+
+.log {
+    width: 200px;
+    margin: auto;
+}
+
+.log-element-list {
+    font-size: 32px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.log-element-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+.log-element {
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.log-element__value__sub {
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+}
+
+.log-element__value {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.clear-log-button {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.clear-log-button:hover{
+    cursor: pointer;
+    color: var(--primary-color);
 }
 
 @media all and (max-width: 720px) {
