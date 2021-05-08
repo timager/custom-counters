@@ -4,10 +4,10 @@ import { LogElementList } from './LogElementList'
 
 export function Log () {
   const [log] = useConfig('log')
-  return (
-    <div className={'log'}>
+  const [logEnabled] = useConfig('logEnabled')
+  return (logEnabled ? <div className={'log'}>
       <LogElementList log={log}/>
       {log.length > 0 ? <ClearLogButton/> : ''}
-    </div>
+    </div> : <></>
   )
 }

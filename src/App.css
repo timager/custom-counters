@@ -1,9 +1,15 @@
 :root {
     --primary-color: #14b389;
+    --default-dice-size: 150px;
+    --min-dice-size: 50px;
+    --dice-count: 1;
+    --dice-size-modificator-div: 5;
+    --dice-size-modificator: calc(var(--dice-count) / var(--dice-size-modificator-div));
+    --dice-size: min(max(calc(var(--default-dice-size) / var(--dice-size-modificator)), var(--min-dice-size)), var(--default-dice-size));
 }
 
+
 .app {
-    --rect-size: 150px;
     margin: 20px;
 }
 
@@ -34,10 +40,10 @@
 }
 
 .random-number {
-    font-size: calc(var(--rect-size) / 2);
-    width: var(--rect-size);
-    height: var(--rect-size);
-    line-height: var(--rect-size);
+    font-size: calc(var(--dice-size) / 2);
+    width: var(--dice-size);
+    height: var(--dice-size);
+    line-height: var(--dice-size);
     text-align: center;
     border: 3px solid var(--primary-color);
     border-radius: 15px;
@@ -50,6 +56,28 @@
 
 .rotation-animation {
     animation: 200ms linear 0s normal none infinite running rotation;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dice {
+    margin: calc(var(--dice-size) / 6);
+    text-align: center;
+}
+
+.click-all-button {
+    user-select: none;
+    text-align: center;
+    margin: 20px;
+}
+
+.click-all-button:hover {
+    cursor: pointer;
+    color: var(--primary-color);
 }
 
 .log {
@@ -133,10 +161,13 @@
 
 .dice-value {
     color: var(--primary-color);
-    font-size: var(--rect-size);
+    font-size: var(--dice-size);
 }
 
 @media all and (max-width: 720px) {
+    :root{
+        --dice-size-modificator-div: 2;
+    }
     .config {
         display: flex;
         justify-content: space-around;

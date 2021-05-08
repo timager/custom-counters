@@ -7,6 +7,8 @@ import { useState } from 'react'
 export function Config () {
   const [min, setMin] = useConfig('min')
   const [max, setMax] = useConfig('max')
+  const [count, setCount] = useConfig('diceCount')
+  const [logEnabled, setLogEnabled] = useConfig('logEnabled')
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
   function validateIntVal (value) {
@@ -19,6 +21,7 @@ export function Config () {
                        icon={faCog}
                        onClick={() => setModalIsOpen(true)}/>
       <Modal
+        ariaHideApp={false}
         className="settings-button__modal"
         overlayClassName="settings-button__overlay"
         isOpen={modalIsOpen}
@@ -35,6 +38,16 @@ export function Config () {
             <label>До
               <input value={max} inputMode={'numeric'}
                      onChange={e => setMax(validateIntVal(e.target.value))}/>
+            </label>
+            <br/>
+            <label>Количество
+              <input value={count} inputMode={'numeric'}
+                     onChange={e => setCount(validateIntVal(e.target.value))}/>
+            </label>
+            <br/>
+            <label>Лог
+              <input type={'checkbox'} checked={logEnabled}
+                     onChange={() => setLogEnabled(!logEnabled)}/>
             </label>
           </div>
         </div>

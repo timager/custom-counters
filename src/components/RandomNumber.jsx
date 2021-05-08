@@ -14,6 +14,7 @@ import {
 export function RandomNumber () {
   const [value, setNumber] = useState('...')
   const [isAnimated, setIsAnimated] = useState(false)
+  const [logEnabled] = useState('logEnabled')
   const [min] = useConfig('min')
   const [max] = useConfig('max')
   const [log, setLog] = useConfig('log')
@@ -25,7 +26,9 @@ export function RandomNumber () {
     setIsAnimated(true)
     let value = getRandomInDiapason(min, max)
     setNumber(value)
-    addToLog(value, min, max)
+    if (logEnabled) {
+      addToLog(value, min, max)
+    }
     setTimeout(() => setIsAnimated(false), 400)
   }
 
@@ -71,7 +74,7 @@ export function RandomNumber () {
 
   return (
     <div
-      className={isAnimated ? 'rotation-animation ' : ' '}
+      className={isAnimated ? 'rotation-animation dice' : 'dice'}
       onClick={generateNewNumber}>
       {prepareValue(value)}
     </div>

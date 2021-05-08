@@ -1,6 +1,8 @@
 const DEFAULT_CONFIG = {
   min: 1,
   max: 6,
+  diceCount: 1,
+  logEnabled: false,
   log: [],
 }
 
