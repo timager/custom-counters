@@ -1,15 +1,17 @@
 :root {
     --primary-color: #14b389;
-    --default-dice-size: 150px;
     --min-dice-size: 50px;
     --dice-count: 1;
+    --default-dice-size: 150px;
     --dice-size-modificator-div: 5;
     --dice-size-modificator: calc(var(--dice-count) / var(--dice-size-modificator-div));
     --dice-size: min(max(calc(var(--default-dice-size) / var(--dice-size-modificator)), var(--min-dice-size)), var(--default-dice-size));
+
 }
 
-
 .app {
+    /*TODO it-s not build*/
+    font-size: calc(min(max(calc(150px / 5), 50px), 150px) / 1.7);
     margin: 20px;
 }
 
@@ -165,9 +167,10 @@
 }
 
 @media all and (max-width: 720px) {
-    :root{
+    :root {
         --dice-size-modificator-div: 2;
     }
+
     .config {
         display: flex;
         justify-content: space-around;
@@ -181,6 +184,10 @@
         top: 10%;
         right: 10%;
         left: 10%;
+    }
+
+    .container {
+        margin-top: 0;
     }
 }
 
