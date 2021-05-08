@@ -4,9 +4,7 @@
     --dice-count: 1;
     --default-dice-size: 150px;
     --dice-size-modificator-div: 5;
-    --dice-size-modificator: calc(var(--dice-count) / var(--dice-size-modificator-div));
-    --dice-size: clamp(var(--min-dice-size), calc(var(--default-dice-size) / var(--dice-size-modificator)), var(--default-dice-size));
-
+    --dice-size: clamp(var(--min-dice-size), calc(var(--default-dice-size) / var(--dice-count) * var(--dice-size-modificator-div)), var(--default-dice-size));
 }
 
 .app {
