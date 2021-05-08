@@ -5,13 +5,11 @@
     --default-dice-size: 150px;
     --dice-size-modificator-div: 5;
     --dice-size-modificator: calc(var(--dice-count) / var(--dice-size-modificator-div));
-    --dice-size: min(max(calc(var(--default-dice-size) / var(--dice-size-modificator)), var(--min-dice-size)), var(--default-dice-size));
+    --dice-size: clamp(var(--min-dice-size), calc(var(--default-dice-size) / var(--dice-size-modificator)), var(--default-dice-size));
 
 }
 
 .app {
-    /*TODO it-s not build*/
-    font-size: calc(min(max(calc(150px / 5), 50px), 150px) / 1.7);
     margin: 20px;
 }
 
